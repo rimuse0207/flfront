@@ -8,7 +8,7 @@ class Test extends React.Component {
     };
   }
   componentDidMount() {
-    this.getData();
+    // this.getData();
   }
 
   getData = async () => {
@@ -19,7 +19,7 @@ class Test extends React.Component {
 
   render() {
     return (
-      <div>{this.state.data ? this.state.data.data[0].cntntsNo : "false"}</div>
+      <div>{this.props.data ? this.props.data.data[0].cntntsNo : "false"}</div>
     );
   }
 }

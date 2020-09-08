@@ -1,0 +1,11 @@
+.MainText {
+  margin-left: 30px;
+}
+
+.MainText > h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.MainText > p {
+  margin: 0px 80px 10px;
+}

@@ -1,10 +1,26 @@
 import React from "react";
-import Test from "./Test";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Test from "./containers/FlowerDatasContainer";
+import Menu from "./components/Menu";
+import Navi from "./components/Navi";
+import FirstPage from "./components/FirstPage";
+import "./Css/index.css";
 function App() {
   return (
-    <div className="App">
-      <Test></Test>
+    <div>
+      <main>
+        <Router>
+          <Navi></Navi>
+          <div className="Main_body">
+            <Switch>
+              <Route exact path="/" component={FirstPage}></Route>
+              <Route path="/search" component={Test}></Route>
+              <Route path="/read" component={Menu}></Route>
+            </Switch>
+          </div>
+        </Router>
+      </main>
+      <footer></footer>
     </div>
   );
 }
