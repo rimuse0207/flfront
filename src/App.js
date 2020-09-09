@@ -4,6 +4,7 @@ import Test from "./containers/FlowerDatasContainer";
 import Menu from "./components/Menu";
 import Navi from "./components/Navi";
 import FirstPage from "./components/FirstPage";
+import Flowerload from "./components/FlowerLoad";
 import "./Css/index.css";
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <Route exact path="/" component={FirstPage}></Route>
               <Route path="/search" component={Test}></Route>
               <Route path="/read" component={Menu}></Route>
+              <Route Path="/load" component={Flowerload}></Route>
             </Switch>
           </div>
         </Router>
