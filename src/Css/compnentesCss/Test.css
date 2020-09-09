@@ -1,12 +1,10 @@
 .InputType {
   background-color: none;
   height: 3rem;
-  width: 70%;
-  margin-left: 60px;
+  width: 100%;
   border: none;
   border-bottom: 1px solid gray;
   font-size: 1.5rem;
-  padding-left: 10px;
   margin-bottom: 0px;
 }
 
@@ -20,7 +18,7 @@
 .DataTitle {
   position: absolute;
   font-weight: bold;
-  left: 110px;
+  left: 55px;
   bottom: 0px;
   font-size: 0.7rem;
 }
@@ -46,12 +44,12 @@
   padding-left: 30px; */
   overflow: hidden;
   margin: 0 auto;
-  padding: 50px;
 }
 .ShowCss {
   float: left;
   width: 25%;
   padding: 1%;
+  max-width: 230px;
   /* max-width: 280px;
   max-height: 280px; */
 }
@@ -63,7 +61,7 @@
   overflow: hidden;
   border: none;
   border-radius: 30%;
-  box-shadow: 2px 2px 0 #cfd2d1;
+  /* box-shadow: 2px 2px 0 #cfd2d1; */
 }
 .DataLi img {
   width: 100%;

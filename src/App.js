@@ -5,6 +5,8 @@ import Menu from "./components/Menu";
 import Navi from "./components/Navi";
 import FirstPage from "./components/FirstPage";
 import Flowerload from "./components/FlowerLoad";
+import Login from "./containers/LoginContainer";
+import SignUp from "./containers/SignUpContainer";
 import "./Css/index.css";
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
               <Route exact path="/" component={FirstPage}></Route>
               <Route path="/search" component={Test}></Route>
               <Route path="/read" component={Menu}></Route>
-              <Route Path="/load" component={Flowerload}></Route>
+              <Route path="/load" component={Flowerload}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/signup" component={SignUp}></Route>
             </Switch>
           </div>
         </Router>

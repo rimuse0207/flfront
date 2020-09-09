@@ -13,8 +13,12 @@ function Navi() {
         </h3>
         <div className="login">
           <ul>
-            <li>login</li>
-            <li>sign up</li>
+            <Link to="/login">
+              <li>login</li>
+            </Link>
+            <Link to="/signUp">
+              <li>sign up</li>
+            </Link>
           </ul>
         </div>
       </header>

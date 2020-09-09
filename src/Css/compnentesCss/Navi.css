@@ -14,9 +14,9 @@
   line-height: 40px;
   font-size: 1.2rem;
 }
-.login > ul {
+.login > ul > a {
 }
-.login > ul > li {
+.login > ul > a > li {
   border: 1px solid pink;
   display: inline-block;
 }
