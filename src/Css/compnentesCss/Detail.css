@@ -1,0 +1,15 @@
+.DetailBox {
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.DetailBox > h1 {
+  font-weight: bold;
+}
+
+.DetailBox > div {
+  margin-left: 50px;
+  font-size: 1.1rem;
+  font-style: oblique;
+  font-family: fantasy;
+}

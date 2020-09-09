@@ -1,4 +1,5 @@
 import React from "react";
+import "../Css/compnentesCss/Detail.css";
 
 const FlowerDataDetail = ({
   name,
@@ -23,7 +24,7 @@ const FlowerDataDetail = ({
   console.log(datadetail);
 
   return (
-    <div>
+    <div className="DetailBox">
       <h1>{name}</h1>
       <div>{JSON.stringify(clCodeNm)}</div>
       <div>{JSON.stringify(fncltyInfo)}</div>

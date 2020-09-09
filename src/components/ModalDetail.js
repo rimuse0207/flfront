@@ -3,17 +3,17 @@ import ReactDOM from "react-dom";
 import Modal from "react-modal";
 import FlowerDataDetailContainer from "../containers/FlowerDetailContainer";
 
+import "../Css/compnentesCss/ModalDetail.css";
 Modal.setAppElement("#rootModal");
 
 function ModalDetail({ number, cancel, detailon, backUrl, name }) {
   const [modalIsOpen] = React.useState(detailon);
-  console.log(backUrl);
+  console.log(`url(${backUrl})`);
   function closeModal() {
     cancel();
   }
-  const asdads = {
+  const modalstyles = {
     width: "100%",
-
     backgroundImage: `url(${backUrl})`,
     backgroundSize: "100% 100%",
     backgroundRepeat: "no-repeat",
@@ -40,8 +40,8 @@ function ModalDetail({ number, cancel, detailon, backUrl, name }) {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <div style={asdads}>
-          <div>
+        <div style={modalstyles}>
+          <div className="backGround">
             <h2>🌴식물 정보</h2>
             <FlowerDataDetailContainer
               number={number}

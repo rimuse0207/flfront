@@ -66,12 +66,7 @@ class Test extends React.Component {
                   this.handleDetail(list.cntntsNo, backUrl, list.cntntsSj)
                 }
               >
-                <img
-                  src={imgUrl}
-                  width="230"
-                  height="230"
-                  alt={list.cntntsSj}
-                />
+                <img src={imgUrl} alt={list.cntntsSj} />
                 <div className="DataTitle" key={list.cntntsNo}>
                   {list.cntntsSj}
                 </div>

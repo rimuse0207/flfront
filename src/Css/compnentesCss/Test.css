@@ -7,6 +7,7 @@
   border-bottom: 1px solid gray;
   font-size: 1.5rem;
   padding-left: 10px;
+  margin-bottom: 0px;
 }
 
 .PhotoBox {
@@ -14,12 +15,6 @@
   height: 400px;
   display: contents;
   flex-flow: column;
-}
-
-.DataUl {
-  display: flex;
-  flex-flow: wrap;
-  padding-left: 30px;
 }
 
 .DataTitle {
@@ -30,7 +25,7 @@
   font-size: 0.7rem;
 }
 
-.DataLi {
+/* .DataLi {
   display: flex;
   margin: 10px;
   padding: 20px;
@@ -44,11 +39,39 @@
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transition: all 0.3s ease-in-out;
+} */
+.DataUl {
+  /* display: flex;
+  flex-flow: wrap;
+  padding-left: 30px; */
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 50px;
+}
+.ShowCss {
+  float: left;
+  width: 25%;
+  padding: 1%;
+  /* max-width: 280px;
+  max-height: 280px; */
+}
+.DataLi {
+  /* max-width: 100%;
+  height: 200px; */
+  padding-top: 75%;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 30%;
+  box-shadow: 2px 2px 0 #cfd2d1;
 }
 .DataLi img {
-  transform: scale(2);
-  -webkit-transform: scale(1.3);
-  -moz-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  -o-transform: scale(1.3);
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
