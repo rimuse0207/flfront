@@ -1,0 +1,48 @@
+.BOXS {
+  margin-left: 4rem;
+  background-color: white;
+  box-shadow: 3px 3px 0 #cfd2d1;
+  width: 60rem;
+  height: 40rem;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+}
+
+.FlowerNameInput {
+  background-color: none;
+  height: 3rem;
+  width: 97%;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin: 0.3rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+.FlowerNameInput:focus {
+  outline: none;
+  border-bottom: 3px solid skyblue;
+}
+.FlowerNameInput:placeholder-shown {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+
+.DesTextArea {
+  background-color: none;
+  height: 10rem;
+  width: 97%;
+  margin: 10px;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin: 1rem;
+}
+.DesTextArea:focus {
+  outline: none;
+  border-bottom: 3px solid skyblue;
+}

@@ -44,3 +44,22 @@ export const postDiary = (form, file, name, date, flowername, title, desc) => {
     diaryForm
   );
 };
+
+export const getDiary = () =>
+  axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}/diary/readDiary`);
+//axios.get(`http://18.224.37.144:3001/diary/readDiary`);
+
+export const postDelete = (id) =>
+  axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}/diary/delete`, {
+    id,
+  });
+
+export const postComment = (name, desc, id) =>
+  axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}/diary/comment`, {
+    name,
+    desc,
+    id,
+  });
+
+export const getComment = (id) =>
+  axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}/diary/comment/${id}`);
