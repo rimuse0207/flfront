@@ -1,7 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Css/compnentesCss/Navi.css";
-function Navi() {
+import { connect } from "react-redux";
+import { initialForm } from "../models/user/login";
+
+function Navi({ login, loginSuccess, initialForm }) {
+  const handleLogOut = () => {
+    localStorage.setItem("useredName", false);
+    localStorage.setItem("loginee", false);
+    initialForm();
+  };
+
+  const Success = loginSuccess ? (
+    <>
+      <div>{login.useredName}님 </div>
+      <button onClick={handleLogOut}>logout</button>
+    </>
+  ) : (
+    <>
+      <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
+        <span role="img" aria-label="login">
+          ✈️
+        </span>
+        ーlogin
+      </Link>
+      <Link to="/signUp" style={{ textDecoration: "none", color: "black" }}>
+        <span role="img" aria-label="logout">
+          🛩
+        </span>
+        ーSign Up
+      </Link>
+    </>
+  );
   return (
     <div className="Nav">
       <header className="Header">
@@ -12,14 +42,15 @@ function Navi() {
           <Link to="/">이 꽃 뭐야</Link>
         </h3>
         <div className="login">
-          <ul>
+          {Success}
+          {/* <ul>
             <Link to="/login">
               <li>login</li>
             </Link>
             <Link to="/signUp">
               <li>sign up</li>
             </Link>
-          </ul>
+          </ul> */}
         </div>
       </header>
       <ul>
@@ -40,4 +71,10 @@ function Navi() {
   );
 }
 
-export default Navi;
+export default connect(
+  (state) => ({
+    loginSuccess: state.login.loginSuccess,
+    login: state.login.login,
+  }),
+  { initialForm }
+)(Navi);

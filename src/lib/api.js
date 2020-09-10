@@ -1,11 +1,11 @@
 import axios from "axios";
 
 export const getData = () =>
-  axios.get(`http://${process.env.REACT_APP_SERVER_ADDRESS}/users`);
+  axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}/users`);
 // axios.get(`http://18.221.28.100:4000/users`);
 
 export const sendFlowerDataDetail = (number) =>
-  axios.post(`http://${process.env.REACT_APP_SERVER_ADDRESS}/users/qwe`, {
+  axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}/users/qwe`, {
     number,
   });
 // axios.post(`http://18.221.28.100:4000/users/qwe`, {
