@@ -5,12 +5,7 @@ const Comment = ({ data }) => {
   const commentOn = data.map((list) => {
     return (
       <>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="MommentCss">
           <span key={list.useredName}>{list.useredName}</span>
           <span style={{ fontSize: "0.5rem", color: "gray" }}>
             {list.date.substr(0, 10)}

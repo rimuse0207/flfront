@@ -15,16 +15,15 @@ Modal.setAppElement("#rootModal");
 
 const customStyles = {
   content: {
-    width: "70%",
+    width: "30%",
     padding: "0",
-    height: "90%",
+    height: "80%",
     top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    display: "flex",
   },
 };
 const settings = {
@@ -64,11 +63,13 @@ const ReadModal = ({
 
   const images = data.imageFile.map((list) => {
     return (
-      <img
-        key={list}
-        height="100%"
-        src={`${process.env.REACT_APP_SERVER_ADDRESS}/img/${list}`}
-      ></img>
+      <div className="ModalImg">
+        <img
+          key={list}
+          height="100%"
+          src={`${process.env.REACT_APP_SERVER_ADDRESS}/img/${list}`}
+        ></img>
+      </div>
     );
   });
 
@@ -104,21 +105,14 @@ const ReadModal = ({
   return (
     <>
       <Modal isOpen={show} onRequestClose={closeModal} style={customStyles}>
-        <div className="BoxDiv2">
-          <Slider {...settings}>{images}</Slider>
-        </div>
+        <div className="BoxDiv2">{images}</div>
         <div className="BoxDiv3">
           <h1 className="FlowerNameh1">{data.flowerName}</h1>
           <h2>{data.title}</h2>
 
           <div className="CommentBox">
             <div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
+              <div style={{}}>
                 <span>{data.useredName}</span>
 
                 <span style={{ fontSize: "0.5rem", color: "gray" }}>

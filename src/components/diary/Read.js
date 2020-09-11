@@ -55,7 +55,7 @@ const Read = ({ diaryData, login, postDelete }) => {
         const url = `${process.env.REACT_APP_SERVER_ADDRESS}/img/${list.imageFile[0]}`;
 
         return (
-          <div key={i}>
+          <div className="BOOOOXXX" key={i}>
             <div className="BoxDiv" key={list._id}>
               <img
                 src={list.imageFile[0] ? url : defaulturl}
@@ -76,6 +76,7 @@ const Read = ({ diaryData, login, postDelete }) => {
   return (
     <div style={{ width: "100%", marginLeft: "4%" }}>
       <input
+        style={{ display: "block" }}
         className="SearchInput"
         value={search}
         name="search"

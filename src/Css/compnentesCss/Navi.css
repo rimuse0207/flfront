@@ -1,5 +1,4 @@
 .Nav {
-  border: 1px solid lime;
   position: relative;
 }
 .Nav > .Header > h3 > a {
@@ -7,21 +6,18 @@
   font-size: 2rem;
 }
 .login {
-  border: 1px solid red;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 60px;
+  top: 10px;
   line-height: 40px;
   font-size: 1.2rem;
 }
 .login > ul > a {
 }
 .login > ul > a > li {
-  border: 1px solid pink;
   display: inline-block;
 }
 .Nav > ul {
-  border: 1px solid orange;
   margin-top: 20px;
   margin-bottom: 20px;
 }
