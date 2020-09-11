@@ -102,22 +102,28 @@ const Login = ({
   return (
     <div className="BackBox">
       <div className="LginGrap">로그인</div>
-      <form>
-        <input
-          className="LgoinInput"
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={handleChangeEmail}
-        ></input>
-        <input
-          className="LgoinInput"
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={handleChangePassword}
-        ></input>
+      <form className="goBottom">
+        <div className="divBoxd">
+          <input
+            className="FlowerNameInput"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={handleChangeEmail}
+          ></input>
+          <label className="FlowerNameLabel">EMAIL</label>
+        </div>
+        <div className="divBoxd">
+          <input
+            className="FlowerNameInput"
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={password}
+            onChange={handleChangePassword}
+          ></input>
+          <label className="FlowerNameLabel">PassWord</label>
+        </div>
         {Check}
         <button className="LoginButton" onClick={handleClick}>
           <span role="img" aria-label="login">

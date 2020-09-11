@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import DatePicker from "react-datepicker";
 
+import "../../Css/compnentesCss/Write.css";
+
 import "react-datepicker/dist/react-datepicker.css";
 
 const Write = ({ handleSend, login, history }) => {
@@ -98,12 +100,17 @@ const Write = ({ handleSend, login, history }) => {
 
   return (
     <div className="BOXS">
+      <h2>관찰 일기 쓰기</h2>
       <div>
         {(fileArray || []).map((url) => (
           <img key={url} src={url} alt="..." width="150" height="150" />
         ))}
       </div>
-      <form onSubmit={handleClick} encType="multipart/form-data">
+      <form
+        className="goBottom"
+        onSubmit={handleClick}
+        encType="multipart/form-data"
+      >
         <input
           type="file"
           name="img"
@@ -111,34 +118,44 @@ const Write = ({ handleSend, login, history }) => {
           onChange={uploadMultipleFiles}
           multiple
         ></input>
+
+        <div className="divBoxd">
+          <input
+            className="FlowerNameInput"
+            name="flowerName"
+            placeholder="꽃 이름"
+            value={form.flowerName}
+            onChange={handleChangeDiary}
+          ></input>
+          <label className="FlowerNameLabel">꽃 이름</label>
+        </div>
+        <div className="divBoxd">
+          <input
+            className="FlowerNameInput"
+            name="title"
+            placeholder="제목"
+            value={form.title}
+            onChange={handleChangeDiary}
+          ></input>
+          <label className="FlowerNameLabel">제목</label>
+        </div>
+        <div className="divBoxd">
+          <textarea
+            className="DesTextArea"
+            name="descreption"
+            value={form.descreption}
+            onChange={handleChangeDiary}
+          ></textarea>
+          <label className="FlowerNameLabel">내용</label>
+        </div>
         <DatePicker
           selected={startDate}
           onChange={handleChange}
           placeholder="날짜"
         ></DatePicker>
-
-        <input
-          className="FlowerNameInput"
-          name="flowerName"
-          placeholder="꽃 이름"
-          value={form.flowerName}
-          onChange={handleChangeDiary}
-        ></input>
-
-        <input
-          className="FlowerNameInput"
-          name="title"
-          placeholder="제목"
-          value={form.title}
-          onChange={handleChangeDiary}
-        ></input>
-        <textarea
-          name="descreption"
-          value={form.descreption}
-          onChange={handleChangeDiary}
-          placeholder="내용"
-        ></textarea>
-        <button type="submit">일기 저장</button>
+        <button className="LoginButton" type="submit">
+          일기 저장
+        </button>
       </form>
     </div>
   );
