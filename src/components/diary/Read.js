@@ -40,7 +40,7 @@ const Read = ({ diaryData, login, postDelete }) => {
       window.location.reload();
     }
   };
-
+  console.log(diaryData);
   const dataForm2 = diaryData ? (
     diaryData.diaryData
       .filter((info) => {

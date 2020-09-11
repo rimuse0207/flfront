@@ -29,16 +29,18 @@ export const postSignUp = (email, password) =>
 
 export const postDiary = (form, file, name, date, flowername, title, desc) => {
   const diaryForm = new FormData();
+
   for (const key of Object.keys(file)) {
     diaryForm.append("img", file[key]);
   }
-
   diaryForm.append("useredName", name);
   diaryForm.append("date", date);
   diaryForm.append("flowerName", flowername);
   diaryForm.append("title", title);
   diaryForm.append("desc", desc);
-
+  for (var value of diaryForm.values()) {
+    console.log(value);
+  }
   axios.post(
     `${process.env.REACT_APP_SERVER_ADDRESS}/diary/newDiary`,
     diaryForm

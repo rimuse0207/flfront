@@ -93,8 +93,8 @@ const Write = ({ handleSend, login, history }) => {
       });
       setFileArray([]);
       setFileObj([]);
-      history.push("/read");
-      window.location.reload();
+      //history.push("/read");
+      //window.location.reload();
     }
   };
 
