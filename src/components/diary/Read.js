@@ -42,23 +42,20 @@ const Read = ({ diaryData, login, postDelete }) => {
   };
 
   const dataForm2 = diaryData ? (
-    diaryData
+    diaryData.diaryData
       .filter((info) => {
-        if (search === "") return info;
-        else if (
-          diaryData.flowerName
-            .toLowerCase()
-            .includes(search.flowerName.toLowerCase())
-        ) {
+        if (search === "") return diaryData;
+        else if (info.flowerName.includes(search)) {
           return info;
         }
       })
-      .map((list) => {
+      .map((list, i) => {
         const defaulturl =
           "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.huffingtonpost.kr%2F2017%2F04%2F19%2Fstory_n_16094274.html&psig=AOvVaw3Szv5L7uLiPYjr6cZCRXCB&ust=1591375134371000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDqxsLM6OkCFQAAAAAdAAAAABAJ";
         const url = `${process.env.REACT_APP_SERVER_ADDRESS}/img/${list.imageFile[0]}`;
+
         return (
-          <>
+          <div key={i}>
             <div className="BoxDiv" key={list._id}>
               <img
                 src={list.imageFile[0] ? url : defaulturl}
@@ -66,10 +63,10 @@ const Read = ({ diaryData, login, postDelete }) => {
                 width="300"
                 height="300"
                 onClick={() => handleClick(list)}
-                key={list._id}
+                key={list.imageFile}
               ></img>
             </div>
-          </>
+          </div>
         );
       })
   ) : (
