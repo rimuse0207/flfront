@@ -50,8 +50,7 @@ const Read = ({ diaryData, login, postDelete }) => {
         }
       })
       .map((list, i) => {
-        const defaulturl =
-          "../../../public/thumb_d_8440EFF23B9AE77574B5666A4FB091AA.jpg";
+        const defaulturl = "/thumb_d_8440EFF23B9AE77574B5666A4FB091AA.jpg";
         const url = `${config.SERVER_ADDRESS}/img/${list.imageFile[0]}`;
 
         return (

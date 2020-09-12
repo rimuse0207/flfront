@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import Modal from "react-modal";
 import FlowerDataDetailContainer from "../containers/FlowerDetailContainer";
@@ -21,9 +21,8 @@ function ModalDetail({ number, cancel, detailon, backUrl, name }) {
   };
   const customStyles = {
     content: {
-      width: "70%",
       padding: "0",
-      height: "90%",
+      height: "70%",
       top: "50%",
       left: "50%",
       right: "auto",
@@ -33,6 +32,14 @@ function ModalDetail({ number, cancel, detailon, backUrl, name }) {
       filter: "alpha(opacity=30)",
     },
   };
+  useEffect(() => {
+    document.body.style.cssText = `position: fixed; top: -${window.scrollY}px`;
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = `position: ""; top: "";`;
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    };
+  }, []);
   return (
     <>
       <Modal

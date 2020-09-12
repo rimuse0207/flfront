@@ -10,12 +10,11 @@ import {
   initialForm,
 } from "../../models/diary/comment";
 import Slider from "react-slick";
-
+import "../../Css/compnentesCss/MODALLAL.css";
 Modal.setAppElement("#rootModal");
 
 const customStyles = {
   content: {
-    width: "30%",
     padding: "0",
     height: "80%",
     top: "50%",
@@ -101,11 +100,27 @@ const ReadModal = ({
   ) : (
     <></>
   );
-
+  useEffect(() => {
+    document.body.style.cssText = `position: fixed; top: -${window.scrollY}px`;
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = `position: ""; top: "";`;
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    };
+  }, []);
   return (
     <>
       <Modal isOpen={show} onRequestClose={closeModal} style={customStyles}>
-        <div className="BoxDiv2">{images}</div>
+        <div className="BoxDiv2">
+          {images}
+          {data.imageFile[0] ? (
+            <></>
+          ) : (
+            <div className="ModalImg">
+              <img src="/thumb_d_8440EFF23B9AE77574B5666A4FB091AA.jpg"></img>{" "}
+            </div>
+          )}
+        </div>
         <div className="BoxDiv3">
           <h1 className="FlowerNameh1">{data.flowerName}</h1>
           <h2>{data.title}</h2>
