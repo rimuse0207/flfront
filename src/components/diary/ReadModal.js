@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 
 import Comment from "./Comment";
-
+import * as config from "../../conf";
 import { connect } from "react-redux";
 import {
   postComment,
@@ -67,7 +67,7 @@ const ReadModal = ({
         <img
           key={list}
           height="100%"
-          src={`${process.env.REACT_APP_SERVER_ADDRESS}/img/${list}`}
+          src={`${config.SERVER_ADDRESS}/img/${list}`}
         ></img>
       </div>
     );
