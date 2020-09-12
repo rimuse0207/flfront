@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import * as config from "../../conf";
 import ReadModal from "./ReadModal";
 import "../../Css/compnentesCss/Read.css";
 
@@ -51,8 +51,8 @@ const Read = ({ diaryData, login, postDelete }) => {
       })
       .map((list, i) => {
         const defaulturl =
-          "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.huffingtonpost.kr%2F2017%2F04%2F19%2Fstory_n_16094274.html&psig=AOvVaw3Szv5L7uLiPYjr6cZCRXCB&ust=1591375134371000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDqxsLM6OkCFQAAAAAdAAAAABAJ";
-        const url = `${process.env.REACT_APP_SERVER_ADDRESS}/img/${list.imageFile[0]}`;
+          "../../../public/thumb_d_8440EFF23B9AE77574B5666A4FB091AA.jpg";
+        const url = `${config.SERVER_ADDRESS}/img/${list.imageFile[0]}`;
 
         return (
           <div className="BOOOOXXX" key={i}>
