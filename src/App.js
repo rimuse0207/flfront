@@ -8,9 +8,11 @@ import Flowerload from "./components/FlowerLoad";
 import Login from "./containers/LoginContainer";
 import SignUp from "./containers/SignUpContainer";
 import Write from "./containers/diary/WriteContainer.js";
+import FlowerLoad from "./containers/FlowerLoadContainer";
+import { connect } from "react-redux";
 
 import "./Css/index.css";
-function App() {
+function App({ login }) {
   return (
     <div>
       <main>
@@ -21,10 +23,14 @@ function App() {
               <Route exact path="/" component={FirstPage}></Route>
               <Route path="/search" component={Test}></Route>
               <Route path="/read" component={Read}></Route>
-              <Route path="/write" component={Write}></Route>
+              <Route
+                path="/write"
+                component={login.useredName ? Write : Login}
+              ></Route>
               <Route path="/load" component={Flowerload}></Route>
               <Route path="/login" component={Login}></Route>
               <Route path="/signup" component={SignUp}></Route>
+              <Route path="/flowerload" component={FlowerLoad}></Route>
             </Switch>
           </div>
         </Router>
@@ -34,4 +40,6 @@ function App() {
   );
 }
 
-export default App;
+export default connect((state) => ({
+  login: state.login.login,
+}))(App);

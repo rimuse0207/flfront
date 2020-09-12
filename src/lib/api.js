@@ -65,3 +65,7 @@ export const postComment = (name, desc, id) =>
 
 export const getComment = (id) =>
   axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}/diary/comment/${id}`);
+export const getFlowerload = () =>
+  axios.get(
+    "http://openapi.seoul.go.kr:8088/6a674b6673786b713130376f52704348/json/MgisSpringStreet/1/100/"
+  );

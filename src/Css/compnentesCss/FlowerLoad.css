@@ -1,0 +1,39 @@
+.Animation {
+  width: 55rem;
+  margin-left: 3.5rem;
+  margin-top: 2rem;
+  display: contents;
+  overflow: hidden;
+  flex-flow: wrap;
+}
+.InfoBox {
+  color: white;
+}
+.FlowerBox {
+  box-shadow: 2px 2px 0 #cfd2d1;
+  width: 15rem;
+
+  margin: 2rem;
+
+  cursor: pointer;
+}
+.MapBox {
+  margin: 10px;
+  width: 71%;
+  margin-left: 60px;
+  height: 6rem;
+}
+.BorderBox {
+  display: flex;
+  flex-flow: wrap;
+}
+.SearchInput {
+  background-color: none;
+  height: 3rem;
+  width: 70%;
+  margin-left: 60px;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 1.5rem;
+  padding-left: 10px;
+}

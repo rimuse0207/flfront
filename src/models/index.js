@@ -6,6 +6,7 @@ import flowerDataDetail from "./flowerDataDetail";
 import login from "./user/login";
 import diary from "./diary/diary";
 import comment from "./diary/comment";
+import flowerLoad from "./flowerLoad";
 const persistConfig = {
   key: "root",
   storage,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   login,
   diary,
   comment,
+  flowerLoad,
 });
 
 export default persistReducer(persistConfig, rootReducer);
