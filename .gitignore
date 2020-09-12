@@ -25,3 +25,4 @@ yarn-error.log*
 
 .conf.js
 conf.js
+/conf.js
