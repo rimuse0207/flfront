@@ -73,7 +73,7 @@ const Read = ({ diaryData, login, postDelete }) => {
   );
 
   return (
-    <div style={{ width: "100%", marginLeft: "4%" }}>
+    <div style={{ width: "100%" }}>
       <input
         style={{ display: "block" }}
         className="SearchInput"

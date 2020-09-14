@@ -12,9 +12,12 @@ body {
 
 .Header > h3 {
   display: inline;
-  border: 1px solid red;
+  font-family: cursive;
 }
 .Header {
-  border: 1px solid blue;
   display: inline;
+  font-family: cursive;
+}
+.Main_body {
+  text-align: center;
 }

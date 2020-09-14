@@ -13,8 +13,9 @@ function Navi({ login, loginSuccess, initialForm }) {
 
   const Success = loginSuccess ? (
     <>
-      <div>{login.useredName}님 </div>
-      <button onClick={handleLogOut}>logout</button>
+      <div>
+        {login.useredName}님<button onClick={handleLogOut}>logout</button>
+      </div>
     </>
   ) : (
     <>

@@ -7,7 +7,7 @@
 }
 .login {
   position: absolute;
-  right: 60px;
+  right: 10px;
   top: 10px;
   line-height: 40px;
   font-size: 1.2rem;
@@ -16,13 +16,13 @@
 }
 .login > ul > a > li {
   display: inline-block;
+  font-family: cursive;
 }
 .Nav > ul {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .Nav > ul > li {
-  border: 1px solid black;
   display: inline-block;
   width: 25%;
   text-align: center;
@@ -31,5 +31,9 @@
   font-size: 1rem;
 }
 
+.Nav > ul > li :hover {
+  transition: 0.3s;
+  color: skyblue;
+}
 .Nav > ul > li > a {
 }

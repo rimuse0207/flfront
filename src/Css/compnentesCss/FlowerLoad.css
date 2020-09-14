@@ -30,8 +30,8 @@
 .SearchInput {
   background-color: none;
   height: 3rem;
-  width: 70%;
-  margin-left: 60px;
+  width: 89%;
+  margin: 0 auto;
   border: none;
   border-bottom: 1px solid gray;
   font-size: 1.5rem;
