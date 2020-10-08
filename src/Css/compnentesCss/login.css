@@ -3,6 +3,7 @@
   background-color: white;
   box-shadow: 3px 3px 0 #cfd2d1;
   width: 80%;
+  max-width: 500px;
   height: auto;
   padding: 10px;
   margin: 0 auto;
