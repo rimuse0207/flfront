@@ -4,59 +4,6 @@ import { withRouter } from "react-router-dom";
 
 import "../Css/compnentesCss/login.css";
 
-// const BackBox = styled.div`
-//   margin-left: 10rem;
-//   background-color: white;
-//   box-shadow: 3px 3px 0 #cfd2d1;
-//   width: 40rem;
-//   height: 20rem;
-//   padding: 10px;
-// `;
-// const LoginGrap = styled.div`
-//   background-color: #6561e6;
-
-//   height: 4rem;
-//   margin: 10px;
-//   margin-top: 5px;
-//   display: flex;
-//   padding-left: 10px;
-//   align-items: center;
-//   color: white;
-//   font-size: 1.3rem;
-// `;
-// const LoginInput = styled.input`
-//   background-color: none;
-//   height: 2rem;
-//   width: 97%;
-//   margin: 10px;
-//   border: none;
-//   border-bottom: 1px solid gray;
-// `;
-// const LoginButton = styled.button`
-//   background-color: #3f51b5;
-//   color: white;
-//   height: 3rem;
-//   margin: 10px;
-//   width: 39rem;
-//   font-size: 1.3rem;
-// `;
-// const LoginBox = styled.div`
-//   color: #3f51b5;
-//   box-shadow: 1px 1px 0 #cfd2d1;
-//   padding: 10px;
-//   margin-left: 10px;
-//   width: 50%;
-//   display: flex;
-//   justify-content: center;
-//   margin-top: 10px;
-//   font-family: upset;
-// `;
-
-// const CheckedBox = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   color: red;
-// `;
 
 const Login = ({
   sendOn,
