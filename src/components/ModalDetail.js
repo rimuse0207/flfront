@@ -13,6 +13,7 @@ function ModalDetail({ number, cancel, detailon, backUrl, name }) {
     cancel();
   }
   const modalstyles = {
+    maxWidth:"1000px",
     width: "100%",
     backgroundImage: `url(${backUrl})`,
     backgroundSize: "100% 100%",
@@ -21,6 +22,7 @@ function ModalDetail({ number, cancel, detailon, backUrl, name }) {
   };
   const customStyles = {
     content: {
+      maxWidth:"1000px",
       padding: "0",
       height: "70%",
       top: "50%",

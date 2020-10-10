@@ -23,6 +23,7 @@ function App({ login }) {
               <Route exact path="/" component={FirstPage}></Route>
               <Route path="/search" component={Test}></Route>
               <Route path="/read" component={Read}></Route>
+              
               <Route
                 path="/write"
                 component={login.useredName ? Write : Login}
