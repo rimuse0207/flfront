@@ -7,7 +7,9 @@ const Read = ({ diaryData, login, postDelete }) => {
   const [show, setShow] = useState(false);
   const [datas, setDatas] = useState("");
   const [search, setSearch] = useState("");
-
+  console.log("show",show)
+  console.log("datas",datas)
+  console.log("search",search)
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
@@ -23,6 +25,7 @@ const Read = ({ diaryData, login, postDelete }) => {
 
   const ShowInfo = show ? (
     <ReadModal
+      postDelete={postDelete}
       show={show}
       cancel={cancel}
       data={datas}
@@ -35,7 +38,7 @@ const Read = ({ diaryData, login, postDelete }) => {
   const handleDelete = (id) => {
     const confirmflag = window.confirm("really?");
     if (confirmflag) {
-      console.log("delelte");
+      console.log("delelte"); 
       postDelete(id);
       window.location.reload();
     }
@@ -64,6 +67,7 @@ const Read = ({ diaryData, login, postDelete }) => {
                 onClick={() => handleClick(list)}
                 key={list.imageFile}
               ></img>
+              
             </div>
           </div>
         );

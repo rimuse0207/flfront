@@ -8,7 +8,11 @@ import {
   postComment,
   getComment,
   initialForm,
+  
 } from "../../models/diary/comment";
+import {
+  postDelete
+}from "../../models/diary/diary"
 import Slider from "react-slick";
 import "../../Css/compnentesCss/MODALLAL.css";
 Modal.setAppElement("#rootModal");
@@ -25,13 +29,7 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
   },
 };
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+
 
 const ReadModal = ({
   show,
@@ -42,6 +40,7 @@ const ReadModal = ({
   getComment,
   commentData,
   initialForm,
+  postDelete
 }) => {
   function closeModal() {
     initialForm();
@@ -59,6 +58,12 @@ const ReadModal = ({
     initialForm();
     getComment(data._id);
   };
+
+  const deleteButton = (e) =>{
+    //e.preventDefault();
+    console.log(data);
+    postDelete(data.useredName);
+  }
 
   const images = data.imageFile.map((list) => {
     return (
@@ -86,6 +91,8 @@ const ReadModal = ({
       getComment(data._id);
     };
   }, [postComment]);
+
+  const MakeDelete = login.useredName===data.useredName ? (<button onClick={deleteButton}>delete</button>) :<></>
 
   const LoginCheck = login.useredName ? (
     <form className="CommentForm" onSubmit={handleSubmit}>
@@ -124,7 +131,7 @@ const ReadModal = ({
         <div className="BoxDiv3">
           <h1 className="FlowerNameh1">{data.flowerName}</h1>
           <h2>{data.title}</h2>
-
+          {MakeDelete}
           <div className="CommentBox">
             <div>
               <div style={{}}>
@@ -138,7 +145,9 @@ const ReadModal = ({
               </div>
               <div className="CommentMessage">{data.descreption}</div>
               {comment123}
+              
             </div>
+            
           </div>
           {LoginCheck}
         </div>
@@ -155,5 +164,6 @@ export default connect(
     postComment,
     getComment,
     initialForm,
+    postDelete
   }
 )(ReadModal);
