@@ -63,6 +63,8 @@ const ReadModal = ({
     //e.preventDefault();
     console.log(data);
     postDelete(data.useredName);
+    cancel();
+    window.location.reload();
   }
 
   const images = data.imageFile.map((list) => {
